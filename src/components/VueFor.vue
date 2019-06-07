@@ -1,12 +1,29 @@
 <template>
   <div class="vue-for">
-    Hello from VueFor!
+    <ul>
+      <li v-for="ingredient in ingredients" v-bind:key="ingredient">
+        {{ ingredient }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "VueFor"
+  name: "VueFor",
+  data: function() {
+    return {
+      ingredients: [],
+      persons: []
+    };
+  },
+  created: function() {
+    this.ingredients = ["meat", "fruit", "cookies"];
+    this.persons = [
+      { name: "Max", age: 27, color: "red" },
+      { name: "Anna", age: 30, color: "blue" }
+    ];
+  }
 };
 </script>
 
