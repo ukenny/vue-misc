@@ -5,6 +5,7 @@
         {{ ingredient }} ({{ i }})
       </li>
     </ul>
+    <button @click="ingredients.push('spices')">Add New Ingredient</button>
     <br />
     <ul>
       <li v-for="person in persons" v-bind:key="person.name">
@@ -15,6 +16,9 @@
             {{ key }} --> {{ value }} at {{ index }},
           </span>
         </h2>
+        <h3 v-for="n in 10" v-bind:key="n">
+          {{ n }}
+        </h3>
       </li>
     </ul>
     <br />
