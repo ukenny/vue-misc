@@ -5,6 +5,10 @@
         {{ ingredient }} ({{ i }})
       </li>
     </ul>
+    <template v-for="(ingredient, index) in ingredients">
+      <h1 v-bind:key="ingredient">{{ ingredient }}</h1>
+      <p v-bind:key="index">{{ index }}</p>
+    </template>
   </div>
 </template>
 
