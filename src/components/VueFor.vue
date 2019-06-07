@@ -1,8 +1,8 @@
 <template>
   <div class="vue-for">
     <ul>
-      <li v-for="ingredient in ingredients" v-bind:key="ingredient">
-        {{ ingredient }}
+      <li v-for="(ingredient, i) in ingredients" v-bind:key="ingredient">
+        {{ ingredient }} ({{ i }})
       </li>
     </ul>
   </div>
